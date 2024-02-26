@@ -1,0 +1,104 @@
+[1mdiff --git a/04dic/index.html b/04dic/index.html[m
+[1mdeleted file mode 100644[m
+[1mindex 855c47a..0000000[m
+[1m--- a/04dic/index.html[m
+[1m+++ /dev/null[m
+[36m@@ -1,59 +0,0 @@[m
+[31m-<!doctype html>[m
+[31m-<html>[m
+[31m-<head>[m
+[31m-<meta charset="utf-8">[m
+[31m-<title>Ingreso de datos</title>[m
+[31m-</head>[m
+[31m-[m
+[31m-<body>[m
+[31m-<form id="form1" name="form1" method="post" action="php/envio.php">[m
+[31m-  <p>[m
+[31m-    <label for="textfield">Nombres y Apellidos:</label>[m
+[31m-    <input type="text" name="nombre" id="nombre" size="50" placeholder="Nombres y Apellidos" required>[m
+[31m-  </p>[m
+[31m-  <p>[m
+[31m-    <label for="textfield">Cedula:</label>[m
+[31m-    <input type="number" name="cedula" id="cedula" step="0.01" placeholder="Cedula de identidad" required>[m
+[31m-  </p>[m
+[31m-  <p>[m
+[31m-    <label for="date">Fecha de nacimiento:</label>[m
+[31m-    <input type="date" name="fnac" id="fnac" max="2005-12-31" required>[m
+[31m-  </p>[m
+[31m-  <p>[m
+[31m-    <label for="email">Email:</label>[m
+[31m-    <input type="email" name="email" id="email" placeholder="Correo electrónico" required>[m
+[31m-  </p>[m
+[31m-  <p>[m
+[31m-    <label for="select">Estado Civil:</label>[m
+[31m-    <select name="estadocivil" id="estadocivil" required>[m
+[31m-      <option value="Soltero">Soltero</option>[m
+[31m-      <option value="Casado">Casado</option>[m
+[31m-      <option value="Divorciado">Divorciado</option>[m
+[31m-      <option value="Union Libre">Union Libre</option>[m
+[31m-    </select>[m
+[31m-  </p>[m
+[31m-  <p>Tipo de empleado:</p>[m
+[31m-  <p>[m
+[31m-    <label>[m
+[31m-      <input type="radio" name="tipoempleado" value="Empleado Privado" id="tipoempleado_0" required>[m
+[31m-      Empleado Privado</label>[m
+[31m-    <br>[m
+[31m-    <label>[m
+[31m-      <input type="radio" name="tipoempleado" value="Empleado Público" id="tipoempleado_1">[m
+[31m-      Empleado Público</label>[m
+[31m-    <br>[m
+[31m-    <label>[m
+[31m-      <input type="radio" name="tipoempleado" value="Independiente" id="tipoempleado_2">[m
+[31m-      Independiente</label>[m
+[31m-  </p>[m
+[31m-  <p>[m
+[31m-    <label for="number">Sueldo:</label>[m
+[31m-    <input type="number" name="sueldo" id="sueldo" min="800" max="2500" placeholder="Entre 800 y 2500" required>[m
+[31m-  </p>[m
+[31m-  <p>[m
+[31m-    <input type="submit" name="submit" id="submit" value="Enviar">[m
+[31m-    <input type="reset" name="reset" id="reset" value="Restablecer">[m
+[31m-  </p>[m
+[31m-</form>[m
+[31m-</body>[m
+[31m-</html>[m
+[1mdiff --git a/04dic/php/envio.php b/04dic/php/envio.php[m
+[1mdeleted file mode 100644[m
+[1mindex e73d828..0000000[m
+[1m--- a/04dic/php/envio.php[m
+[1m+++ /dev/null[m
+[36m@@ -1,32 +0,0 @@[m
+[31m-<?php[m
+[31m-$Nombre = $_POST['nombre'];[m
+[31m-$Cedula = $_POST['cedula'];[m
+[31m-$estadocivil = $_POST['estadocivil'];[m
+[31m-$fnacimiento = $_POST['fnac'];[m
+[31m-$tipoempleado = $_POST['tipoempleado'];[m
+[31m-$correo = $_POST['email'];[m
+[31m-$Sueldo = $_POST['sueldo'];[m
+[31m-[m
+[31m-echo('<table width="100%" height="300" border="1">');[m
+[31m-	echo('<tr>');[m
+[31m-		echo('<th>'); echo("Nombre"); echo('</th>');[m
+[31m-		echo('<th>'); echo("Cedula"); echo('</th>');[m
+[31m-		echo('<th>'); echo("Fecha de nacimiento"); echo('</th>');[m
+[31m-		echo('<th>'); echo("Estado Civil"); echo('</th>');[m
+[31m-		echo('<th>'); echo("Tipo de Empleado"); echo('</th>');[m
+[31m-		echo('<th>'); echo("Correo electronico"); echo('</th>');[m
+[31m-		echo('<th>'); echo("Sueldo"); echo('</th>');[m
+[31m-	echo('</tr>');[m
+[31m-[m
+[31m-	echo('<tr>');[m
+[31m-		echo('<td align="center">'); echo("".$Nombre); echo('</td>');[m
+[31m-		echo('<td align="center">'); echo("".$Cedula); echo('</td>');[m
+[31m-		echo('<td align="center">'); echo("".$fnacimiento); echo('</td>');[m
+[31m-		echo('<td align="center">'); echo("".$estadocivil); echo('</td>');[m
+[31m-		echo('<td align="center">'); echo("".$tipoempleado); echo('</td>');[m
+[31m-		echo('<td align="center">'); echo("".$correo); echo('</td>');[m
+[31m-		echo('<td align="center">'); echo("".$Sueldo); echo('</td>');[m
+[31m-	echo('</tr>');[m
+[31m-echo('</table>');[m
+[31m-[m
+[31m-?>[m
+\ No newline at end of file[m
